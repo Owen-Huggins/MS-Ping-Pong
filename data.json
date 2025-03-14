@@ -1,0 +1,263 @@
+{
+  "players": {
+    "Owen": {
+      "elo": 980,
+      "wins": 3,
+      "losses": 4,
+      "matches": [
+        {
+          "opponent": "Thomas",
+          "score": 21,
+          "opponentScore": 18,
+          "date": "2025-03-12T18:42:10.536Z"
+        },
+        {
+          "opponent": "Thomas",
+          "score": 21,
+          "opponentScore": 15,
+          "date": "2025-03-12T18:42:19.497Z"
+        },
+        {
+          "opponent": "Madie",
+          "score": 12,
+          "opponentScore": 21,
+          "date": "2025-03-13T18:34:51.653Z"
+        },
+        {
+          "opponent": "Madie",
+          "score": 9,
+          "opponentScore": 21,
+          "date": "2025-03-13T18:35:02.013Z"
+        },
+        {
+          "opponent": "Thomas",
+          "score": 15,
+          "opponentScore": 21,
+          "date": "2025-03-13T18:35:45.711Z"
+        },
+        {
+          "opponent": "Thomas",
+          "score": 21,
+          "opponentScore": 16,
+          "date": "2025-03-13T18:35:55.931Z"
+        },
+        {
+          "opponent": "Cade",
+          "score": 14,
+          "opponentScore": 21,
+          "date": "2025-03-13T18:36:11.036Z"
+        }
+      ]
+    },
+    "Thomas": {
+      "elo": 934,
+      "wins": 2,
+      "losses": 8,
+      "matches": [
+        {
+          "opponent": "Owen",
+          "score": 18,
+          "opponentScore": 21,
+          "date": "2025-03-12T18:42:10.536Z"
+        },
+        {
+          "opponent": "Owen",
+          "score": 15,
+          "opponentScore": 21,
+          "date": "2025-03-12T18:42:19.497Z"
+        },
+        {
+          "opponent": "Cade",
+          "score": 18,
+          "opponentScore": 21,
+          "date": "2025-03-13T18:34:25.702Z"
+        },
+        {
+          "opponent": "Cade",
+          "score": 12,
+          "opponentScore": 21,
+          "date": "2025-03-13T18:34:40.868Z"
+        },
+        {
+          "opponent": "Madie",
+          "score": 16,
+          "opponentScore": 21,
+          "date": "2025-03-13T18:35:15.067Z"
+        },
+        {
+          "opponent": "Owen",
+          "score": 21,
+          "opponentScore": 15,
+          "date": "2025-03-13T18:35:45.711Z"
+        },
+        {
+          "opponent": "Owen",
+          "score": 16,
+          "opponentScore": 21,
+          "date": "2025-03-13T18:35:55.931Z"
+        },
+        {
+          "opponent": "Cade",
+          "score": 15,
+          "opponentScore": 21,
+          "date": "2025-03-13T18:36:22.465Z"
+        },
+        {
+          "opponent": "Cade",
+          "score": 18,
+          "opponentScore": 21,
+          "date": "2025-03-13T18:36:34.250Z"
+        },
+        {
+          "opponent": "Madie",
+          "score": 21,
+          "opponentScore": 18,
+          "date": "2025-03-13T20:23:04.474Z"
+        }
+      ]
+    },
+    "Spy": {
+      "elo": 969,
+      "wins": 0,
+      "losses": 2,
+      "matches": [
+        {
+          "opponent": "West",
+          "score": 18,
+          "opponentScore": 21,
+          "date": "2025-03-12T19:03:33.027Z"
+        },
+        {
+          "opponent": "West",
+          "score": 17,
+          "opponentScore": 21,
+          "date": "2025-03-13T18:35:30.331Z"
+        }
+      ]
+    },
+    "West": {
+      "elo": 1031,
+      "wins": 2,
+      "losses": 0,
+      "matches": [
+        {
+          "opponent": "Spy",
+          "score": 21,
+          "opponentScore": 18,
+          "date": "2025-03-12T19:03:33.027Z"
+        },
+        {
+          "opponent": "Spy",
+          "score": 21,
+          "opponentScore": 17,
+          "date": "2025-03-13T18:35:30.331Z"
+        }
+      ]
+    },
+    "Cade": {
+      "elo": 1063,
+      "wins": 5,
+      "losses": 0,
+      "matches": [
+        {
+          "opponent": "Thomas",
+          "score": 21,
+          "opponentScore": 18,
+          "date": "2025-03-13T18:34:25.702Z"
+        },
+        {
+          "opponent": "Thomas",
+          "score": 21,
+          "opponentScore": 12,
+          "date": "2025-03-13T18:34:40.868Z"
+        },
+        {
+          "opponent": "Owen",
+          "score": 21,
+          "opponentScore": 14,
+          "date": "2025-03-13T18:36:11.036Z"
+        },
+        {
+          "opponent": "Thomas",
+          "score": 21,
+          "opponentScore": 15,
+          "date": "2025-03-13T18:36:22.465Z"
+        },
+        {
+          "opponent": "Thomas",
+          "score": 21,
+          "opponentScore": 18,
+          "date": "2025-03-13T18:36:34.250Z"
+        }
+      ]
+    },
+    "Madie": {
+      "elo": 1028,
+      "wins": 4,
+      "losses": 2,
+      "matches": [
+        {
+          "opponent": "Owen",
+          "score": 21,
+          "opponentScore": 12,
+          "date": "2025-03-13T18:34:51.653Z"
+        },
+        {
+          "opponent": "Owen",
+          "score": 21,
+          "opponentScore": 9,
+          "date": "2025-03-13T18:35:02.013Z"
+        },
+        {
+          "opponent": "Thomas",
+          "score": 21,
+          "opponentScore": 16,
+          "date": "2025-03-13T18:35:15.067Z"
+        },
+        {
+          "opponent": "Tristan",
+          "score": 21,
+          "opponentScore": 16,
+          "date": "2025-03-13T19:02:21.304Z"
+        },
+        {
+          "opponent": "Tristan",
+          "score": 19,
+          "opponentScore": 21,
+          "date": "2025-03-13T19:04:19.847Z"
+        },
+        {
+          "opponent": "Thomas",
+          "score": 18,
+          "opponentScore": 21,
+          "date": "2025-03-13T20:23:04.474Z"
+        }
+      ]
+    },
+    "Tristan": {
+      "elo": 1009,
+      "wins": 1,
+      "losses": 2,
+      "matches": [
+        {
+          "opponent": "Madie",
+          "score": 16,
+          "opponentScore": 21,
+          "date": "2025-03-13T19:02:21.304Z"
+        },
+        {
+          "opponent": "Madie",
+          "score": 21,
+          "opponentScore": 19,
+          "date": "2025-03-13T19:04:19.847Z"
+        },
+        {
+          "opponent": "Madie",
+          "score": 15,
+          "opponentScore": 21,
+          "date": "2025-03-13T19:05:00.429Z"
+        }
+      ]
+    }
+  }
+}
