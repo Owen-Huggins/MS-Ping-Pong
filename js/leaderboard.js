@@ -1,24 +1,36 @@
-// public/js/leaderboard.js
-async function loadLeaderboard() {
+const backendUrl = 'https://ms-ping-pong.onrender.com'; // Replace with your actual backend URL
+
+// Function to fetch player details
+async function loadPlayerDetails(playerName) {
     try {
-      const response = await fetch('/api/leaderboard');
-      const players = await response.json();
-      const tbody = document.querySelector('#leaderboard tbody');
-      tbody.innerHTML = '';
-      players.forEach(player => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-          <td><a href="/profile.html?name=${encodeURIComponent(player.name)}">${player.name}</a></td>
-          <td>${player.elo}</td>
-          <td>${player.wins}</td>
-          <td>${player.losses}</td>
-        `;
-        tbody.appendChild(row);
-      });
+        const response = await fetch(`${backendUrl}/api/player/${encodeURIComponent(playerName)}`);
+        if (!response.ok) {
+            throw new Error('Player not found');
+        }
+        const player = await response.json();
+        document.querySelector('#player-name').textContent = player.name;
+        document.querySelector('#player-elo').textContent = player.elo;
+        document.querySelector('#player-wins').textContent = player.wins;
+        document.querySelector('#player-losses').textContent = player.losses;
+
+        const matchesList = document.querySelector('#player-matches');
+        matchesList.innerHTML = '';
+        player.matches.forEach(match => {
+            const li = document.createElement('li');
+            li.textContent = `vs ${match.opponent} | Score: ${match.score} - ${match.opponentScore} | Date: ${new Date(match.date).toLocaleDateString()}`;
+            matchesList.appendChild(li);
+        });
     } catch (error) {
-      console.error('Error loading leaderboard:', error);
+        console.error('Error loading player details:', error);
+        document.querySelector('#error-message').textContent = 'Player not found!';
     }
-  }
-  
-  document.addEventListener('DOMContentLoaded', loadLeaderboard);
-  
+}
+
+// Get player name from URL and load details
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const playerName = urlParams.get('name');
+    if (playerName) {
+        loadPlayerDetails(playerName);
+    }
+});
