@@ -1,4 +1,6 @@
 // server.js
+
+
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -30,13 +32,31 @@ function calculateElo(ratingA, ratingB, scoreA, K = 32) {
   return Math.round(newRatingA);
 }
 
-// GET leaderboard
-app.get('/api/leaderboard', (req, res) => {
-  const data = loadData();
-  const playersArray = Object.entries(data.players).map(([name, info]) => ({ name, ...info }));
-  playersArray.sort((a, b) => b.elo - a.elo);
-  res.json(playersArray);
-});
+const backendUrl = 'https://ms-ping-pong.onrender.com'; // Replace with the actual backend URL
+
+async function loadLeaderboard() {
+    try {
+        const response = await fetch(`${backendUrl}/api/leaderboard`);
+        const players = await response.json();
+        const tbody = document.querySelector('#leaderboard tbody');
+        tbody.innerHTML = '';
+        players.forEach(player => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td><a href="profile.html?name=${encodeURIComponent(player.name)}">${player.name}</a></td>
+                <td>${player.elo}</td>
+                <td>${player.wins}</td>
+                <td>${player.losses}</td>
+            `;
+            tbody.appendChild(row);
+        });
+    } catch (error) {
+        console.error('Error loading leaderboard:', error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', loadLeaderboard);
+
 
 // GET player details
 app.get('/api/player/:name', (req, res) => {
